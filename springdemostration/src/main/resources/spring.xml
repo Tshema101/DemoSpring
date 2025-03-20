@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!-- Registering the bean in th IOS container -->
+<!-- If there is no scope it mean singleton -->
+    <bean id = "alien" class = "bt.edu.goc.Alien" autowire = "byType">
+    <!-- <property name = "age" value = "24"></property>
+    <property name = "lap" ref = "laptop"></property> -->
+    <property name = "comp">
+     <bean id = "comp" class = "bt.edu.goc.Laptop"/>
+     </property>
+       </bean>
+    
+    <!-- <constructor-arg type="bt.edu.goc.Computer" ref = "laptop"/> -->
+      <!-- <constructor-arg type="bt.edu.goc.Desktop" ref = "laptop"/> -->
+      <!-- <constructor-arg ref = "laptop"/> -->
+    <!-- <constructor-arg index = "2" value = "4500"/> -->
+    <!-- <constructor-arg index = "0" value = "23"/> -->
+    <!-- </bean> -->
+    <!-- <bean id = "alien1" class = "bt.edu.goc.Alien">
+    </bean> -->
+
+    <!-- it is singleton and without scope it creates an object-->
+    <!-- with scope prototye it creates multiple objects but execute when we use it -->
+        <!-- <bean id = "Laptop" class = "bt.edu.goc.Laptop"> -->
+    <!-- <bean id = "comp" class = "bt.edu.goc.Laptop" lazy-init="true"/> -->
+    <!-- <bean id = "comp1" class = "bt.edu.goc.Desktop" primary="true"/> -->
+    <!-- <bean id = "comp2" class = "bt.edu.goc.Desktop"/> -->
+    <!-- <bean id = "comp1" class = "bt.edu.goc.Desktop"> -->
+
+  
+
+</beans>
